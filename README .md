@@ -114,7 +114,7 @@ dev.off()
 ggplot(Q2,aes(y=Q2$`Total Steps`,x=Q2$date))+geom_bar(stat="identity") + ylab("Total Steps")+xlab("Date")+ggtitle("Total Steps by date")
 ```
 
-![plot of chunk unnamed-chunk-3](figure/unnamed-chunk-3-1.png)![plot of chunk unnamed-chunk-3](figure/unnamed-chunk-3-2.png)
+
 
 ```r
 #Histogram of total steps
@@ -125,7 +125,7 @@ qplot(Q2$`Total Steps`,geom="histogram",xlab="Total Steps",ylab="Counts",main="T
 ## `stat_bin()` using `bins = 30`. Pick better value with `binwidth`.
 ```
 
-![plot of chunk unnamed-chunk-3](figure/unnamed-chunk-3-3.png)
+
 
 ```r
 png("plot1.1.png")
@@ -175,7 +175,7 @@ ggplot(Q4,aes(x=Q4$date,y=Q4$`Mean Steps`))+geom_bar(stat="identity")+scale_x_da
 ## Warning: Removed 8 rows containing missing values (position_stack).
 ```
 
-![plot of chunk unnamed-chunk-5](figure/unnamed-chunk-5-1.png)
+
 
 ```r
 png("plot4.png")
@@ -236,7 +236,7 @@ plot(y=Q6.1$Missing,x=Q6.1$date,main="Missing Value Distribution by Date")
 plot(y=Q6.2$Missing,x=Q6.2$Interval,main="Missing Value Distribution by Interval")
 ```
 
-![plot of chunk unnamed-chunk-7](figure/unnamed-chunk-7-1.png)
+
 
 ```r
 table(activity$date)
@@ -323,13 +323,13 @@ dev.off()
 qplot(Q6.6$Steps,geom="histogram",main="Total steps taken histogram post imputation",xlab="Steps",ylab="Count")
 ```
 
-![plot of chunk unnamed-chunk-9](figure/unnamed-chunk-9-1.png)
+
 
 ```
 ## `stat_bin()` using `bins = 30`. Pick better value with `binwidth`.
 ```
 
-![plot of chunk unnamed-chunk-9](figure/unnamed-chunk-9-2.png)
+
 
 
 
@@ -359,7 +359,7 @@ dev.off()
 ggplot(data=Q8.1,aes(y=Steps,x=interval,group=1,color=WDWE))+geom_line() +scale_x_discrete(breaks = seq(0, 2500, by = 300))+ylab("Mean Steps")+xlab("Intervals")+ggtitle("Mean steps across intervals by Weekend and Weekday")
 ```
 
-![plot of chunk unnamed-chunk-10](figure/unnamed-chunk-10-1.png)![plot of chunk unnamed-chunk-10](figure/unnamed-chunk-10-2.png)
+
 
 ```r
 #Producing the panel plot
@@ -368,7 +368,7 @@ library(lattice)
 xyplot(data=Q8.1,Steps~interval|WDWE, grid = TRUE, type = c("p", "smooth"), lwd = 4,panel = panel.smoothScatter)
 ```
 
-![plot of chunk unnamed-chunk-10](figure/unnamed-chunk-10-3.png)
+
 
 ```r
 library(hexbin)
